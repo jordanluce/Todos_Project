@@ -4,7 +4,7 @@ class TodoItemsController < ApplicationController
 	
 
 	def create
-		set_todo_item.create(todo_item_params)
+		@todo_item = set_todo_list.todo_items.create(todo_item_params)
 
 		redirect_to todo_list_path(@todo_list)
 	end
